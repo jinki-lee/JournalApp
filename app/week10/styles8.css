@@ -1,0 +1,19 @@
+/* styles.css */
+.signOutButton {
+    background-color: transparent; /* Transparent background */
+    color: red; /* Red text */
+    cursor: pointer;
+    border: 2px solid red; /* Red border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s; /* Smooth transition for color and background */
+    text-transform: uppercase; /* Optional: makes the text uppercase */
+    font-weight: bold; /* Optional: makes the font bold */
+    outline: none; /* Removes the focus outline */
+  }
+  
+  .signOutButton:hover {
+    background-color: red; /* Red background on hover */
+    color: white; /* White text on hover */
+  }
+  

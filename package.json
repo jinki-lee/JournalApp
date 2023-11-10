@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "encoding": "^0.1.13",
+    "firebase": "^10.6.0",
+    "flowbite": "^2.1.1",
+    "flowbite-react": "^0.6.4",
+    "next": "14.0.2",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.2"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "@types/node": "20.9.0",
+    "@types/react": "18.2.37",
+    "autoprefixer": "^10.4.16",
     "eslint": "^8",
-    "eslint-config-next": "14.0.2"
+    "eslint-config-next": "14.0.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   }
 }
