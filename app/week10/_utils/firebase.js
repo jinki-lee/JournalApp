@@ -14,6 +14,10 @@ const firebaseConfig = {
   measurementId: "G-5993JB0KCH"
 };
  
+//REMEMBER:
+// Add Vercel URL to Firebase
+// In the Firebase console, go to your project settings. Click on "Authorized domains". Click the "Add Domain" button and add your Vercel URL.
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
