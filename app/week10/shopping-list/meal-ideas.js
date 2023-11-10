@@ -75,7 +75,7 @@ function MealIdeas({ ingredient }) {
                     </svg>
                     Recipe Idea
                   </span>
-                  <img src={meal.strMealThumb} alt={meal.strMeal} className="w-10 h-10 rounded-full" />
+                  <Image src={meal.strMealThumb} alt={meal.strMeal} className="w-10 h-10 rounded-full" />
                 </div>
                 <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">{meal.strMeal}</a>
