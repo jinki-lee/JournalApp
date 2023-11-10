@@ -1,110 +1,110 @@
 "use client";
 
-import React, { useState, useEffect } from 'react'; // Only one import for both
-import NewItem from './journal-list/new-journal';
-import JournalList from './journal-list/item-list';
-import MealIdeas from './journal-list/meal-ideas';
+import React, { useState, useEffect } from 'react';
+import NewJournalEntry from './journal-list/NewJournalEntry'; // Renamed import
+import JournalEntryList from './journal-list/JournalEntryList'; // Renamed import
 import Login from './login';
-import { useUserAuth } from './_utils/auth-context'; // Only one import
+import { useUserAuth } from './_utils/auth-context';
 import { db } from "./_utils/firebase";
-import { collection, getDocs, addDoc, query } from "firebase/firestore";
-import getItems from "./_services/journal-list-service";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
-// getShoppingList function to fetch items from Firestore
-async function getShoppingList(userId) {
-  const itemsCollectionRef = collection(db, 'users', userId, 'items');
-  const itemsSnapshot = await getDocs(itemsCollectionRef);
-  const itemsList = itemsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-  return itemsList;
+// getJournalEntries function to fetch journal entries from Firestore
+async function getJournalEntries(userId) {
+  const journalCollectionRef = collection(db, 'users', userId, 'journalEntries');
+  const journalSnapshot = await getDocs(journalCollectionRef);
+  const journalEntries = journalSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  return journalEntries;
 }
 
-// addItem function to add a new item to Firestore
-async function addItem(userId, newItem) {
-  const itemsCollectionRef = collection(db, 'users', userId, 'items');
-  const docRef = await addDoc(itemsCollectionRef, newItem);
-  return { id: docRef.id, ...newItem };
+// addJournalEntry function to add a new journal entry to Firestore
+async function addJournalEntry(userId, newEntry) {
+  const journalCollectionRef = collection(db, 'users', userId, 'journalEntries');
+  const docRef = await addDoc(journalCollectionRef, newEntry);
+  return { id: docRef.id, ...newEntry };
 }
-
 
 export default function Page() {
-  const [items, setItems] = useState([]);
-  const [selectedItemName, setSelectedItemName] = useState('');
+  const [journalEntries, setJournalEntries] = useState([]); // Rename state
+  const [selectedEntry, setSelectedEntry] = useState(null); // New state
   const { user, firebaseSignOut } = useUserAuth();
 
-  // You should replace this with getShoppingList since it's the new function you've created
-  async function loadItems() {
-    const itemsFromService = await getShoppingList(user.uid); // Use getShoppingList to fetch items
-    setItems(itemsFromService);
+  // Use getJournalEntries to fetch journal entries
+  async function loadJournalEntries() {
+    const entriesFromService = await getJournalEntries(user.uid);
+    setJournalEntries(entriesFromService);
   }
 
-  // Updated handleAddItem function to add item to the shopping list
-  const handleAddItem = async (newItem) => {
-  try {
-    const newItemWithId = await addItem(user.uid, newItem); // Use addItem to add to Firestore
-    setItems([...items, newItemWithId]); // Update state with new item including Firestore ID
-  } catch (error) {
-    console.error("Error adding item to Firestore: ", error);
-    // Handle the error appropriately
-  }
-};
+  // Updated handleAddJournalEntry function to add an entry to the journal
+  const handleAddJournalEntry = async (newEntry) => {
+    try {
+      const newEntryWithId = await addJournalEntry(user.uid, newEntry);
+      setJournalEntries([...journalEntries, newEntryWithId]);
+    } catch (error) {
+      console.error("Error adding journal entry to Firestore: ", error);
+      // Handle the error appropriately
+    }
+  };
 
-  // useEffect hook to load items when the component mounts
+  // useEffect hook to load journal entries when the component mounts
   useEffect(() => {
     if (user) {
-      loadItems();
+      loadJournalEntries();
     }
-  }, [user?.uid]); // Dependency array includes user.uid
-  
-  const handleItemSelect = (itemName) => {
-    const cleanedName = itemName.split(',')[0].trim().replace(/[^\w\s]/gi, ''); // Remove size, emojis, and any special characters
-    setSelectedItemName(cleanedName);
+  }, [user?.uid]);
+
+  // New function to handle selecting a journal entry
+  const handleEntrySelect = (entry) => {
+    setSelectedEntry(entry);
   };
 
   if (!user) {
-    // If the user is not logged in, show the Login component
     return <Login />;
   }
 
-  // User is logged in, display the main content and welcome message
   return (
-<main>
-  <div style={{ 
-    textAlign: 'right', // Aligns text to the right
-    paddingRight: '20px', // Adds some space on the right
-  }}>
-    <p>Welcome, {user.displayName}
-    <br />
-    ({user.email})</p>
-    <br />
-    <button 
-      onClick={() => firebaseSignOut()}
-      style={{ 
-        backgroundColor: 'transparent', // Transparent background
-        color: 'red', // Red text color
-        cursor: 'pointer', // Changes the cursor on hover
-        border: '2px solid red', // Red border
-        padding: '10px 20px', // Adds padding for a bigger click area
-        borderRadius: '5px', // Rounded corners
-        transition: 'all 0.3s', // Smooth transition for color and background
-        outline: 'none', // Removes the outline on focus
-      }}
-      onMouseOver={e => {
-        e.target.style.backgroundColor = 'red'; // Red background on hover
-        e.target.style.color = 'white'; // White text on hover
-      }}
-      onMouseOut={e => {
-        e.target.style.backgroundColor = 'transparent'; // Transparent background when not hovered
-        e.target.style.color = 'red'; // Red text when not hovered
-      }}
-    >
-      Sign out
-    </button>
-  </div>
-  <NewItem onAddItem={handleAddItem} />
-  <JournalList items={items} onItemSelect={handleItemSelect} />
-  <MealIdeas ingredient={selectedItemName} />
-</main>
-
-
+    <main>
+      <div style={{ 
+        textAlign: 'right',
+        paddingRight: '20px',
+      }}>
+        <p>Welcome, {user.displayName}
+          <br />
+          ({user.email})</p>
+        <br />
+        <button 
+          onClick={() => firebaseSignOut()}
+          style={{ 
+            backgroundColor: 'transparent',
+            color: 'red',
+            cursor: 'pointer',
+            border: '2px solid red',
+            padding: '10px 20px',
+            borderRadius: '5px',
+            transition: 'all 0.3s',
+            outline: 'none',
+          }}
+          onMouseOver={e => {
+            e.target.style.backgroundColor = 'red';
+            e.target.style.color = 'white';
+          }}
+          onMouseOut={e => {
+            e.target.style.backgroundColor = 'transparent';
+            e.target.style.color = 'red';
+          }}
+        >
+          Sign out
+        </button>
+      </div>
+      <NewJournalEntry onAddEntry={handleAddJournalEntry} /> {/* Rename component */}
+      <JournalEntryList entries={journalEntries} onEntrySelect={handleEntrySelect} /> {/* Rename component */}
+      {/* Render the selected entry's content */}
+      {selectedEntry && (
+        <div className="journal-entry-content">
+          <h3>{selectedEntry.title}</h3>
+          <p>Date: {selectedEntry.date}</p>
+          <p>{selectedEntry.content}</p>
+        </div>
+      )}
+    </main>
   );
 }
