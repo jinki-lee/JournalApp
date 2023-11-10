@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react'; // Only one import for both
-import NewItem from './shopping-list/new-item';
-import ItemList from './shopping-list/item-list';
-import MealIdeas from './shopping-list/meal-ideas';
+import NewItem from './journal-list/new-journal';
+import JournalList from './journal-list/item-list';
+import MealIdeas from './journal-list/meal-ideas';
 import Login from './login';
 import { useUserAuth } from './_utils/auth-context'; // Only one import
 import { db } from "./_utils/firebase";
 import { collection, getDocs, addDoc, query } from "firebase/firestore";
-import getItems from "./_services/shopping-list-service";
+import getItems from "./_services/journal-list-service";
 
 // getShoppingList function to fetch items from Firestore
 async function getShoppingList(userId) {
@@ -101,7 +101,7 @@ export default function Page() {
     </button>
   </div>
   <NewItem onAddItem={handleAddItem} />
-  <ItemList items={items} onItemSelect={handleItemSelect} />
+  <JournalList items={items} onItemSelect={handleItemSelect} />
   <MealIdeas ingredient={selectedItemName} />
 </main>
 
