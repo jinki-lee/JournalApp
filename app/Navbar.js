@@ -2,14 +2,25 @@
 import React from "react";
 
 function Navbar() {
+
+  const journalUrl = "/Journal";
+  const enmaxUrl = "/";
+  const mealUrl = "https://cprg306-assignments-coral.vercel.app/week10";
+  const githubRepoUrl = "https://github.com/jinki-lee";
+  const personalWebsiteUrl = "https://www.jinkilee.ca/";
+  const instagramUrl = "https://www.instagram.com/jinki.jpeg/";
+  const youtubeUrl = "https://www.youtube.com/channel/UCMADNoVufMJPluqkbkRQVoQ";
+  const linkedInUrl = "https://www.linkedin.com/in/jinkilee/";
+  const spotifyUrl = "https://open.spotify.com/user/jinkiplease?si=a5ae5b87966b4ebc";
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
+            src="https://www.svgrepo.com/show/144189/rocket.svg"
+            className="h-10 mr-3"
+            alt="Rocket Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Jinki Lee
@@ -50,14 +61,14 @@ function Navbar() {
                 Home
               </a>
             </li>
-            {/* Weekly Assignments */}
+            {/* Project Dropdown */}
             <li>
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
                 className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Weekly Assignments{" "}
+                Projects{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -79,46 +90,54 @@ function Navbar() {
                 id="dropdownNavbar"
                 className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <div className="py-1">
-                  <a
-                    href="https://google.ca/"
-                    target="_blank"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                  >
-                    GOOGLE
-                  </a>
-                </div>
                 <ul
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
                     <a
-                      href="/week2"
+                      href={journalUrl}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Week 2
+                      Journal Entry App
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/Journal"
+                      href={enmaxUrl}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Week 10
+                      ENMAX - IT Recognition Portal
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={mealUrl}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Meal Idea App
                     </a>
                   </li>
                 </ul>
+                <div className="py-1">
+                  <a
+                    href={githubRepoUrl}
+                    target="_blank"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    My Github Repository
+                  </a>
+                </div>
               </div>
             </li>
-            {/* Github */}
+            {/* Digital Profile */}
             <li>
               <button
                 id="dropdownNavbarLink2"
                 data-dropdown-toggle="dropdownNavbar2"
                 className="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
               >
-                Github{" "}
+                Digital Profile{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -146,31 +165,49 @@ function Navbar() {
                 >
                   <li>
                     <a
-                      href="https://github.com/jinki-lee"
+                      href={personalWebsiteUrl}
                       target="_blank"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Jinki's Github
+                      Personal Website
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://github.com/jinki-lee/cprg306-assignments"
+                      href={instagramUrl}
+                      target="_blank"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={youtubeUrl}
                       target="_blank"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
                     >
-                      Jinki's CPRG306 Repos
+                      Youtube
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={spotifyUrl}
+                      target="_blank"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                    >
+                      Spotify
                     </a>
                   </li>
                 </ul>
 
                 <div className="py-1">
                   <a
-                    href="https://webdev2-derek-sait.vercel.app/"
+                    href={linkedInUrl}
                     target="_blank"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
                   >
-                    Web Dev Course
+                    LinkedIn
                   </a>
                 </div>
               </div>
