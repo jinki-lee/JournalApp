@@ -1,11 +1,11 @@
 import React from "react";
 
-import StudentInfo from "app/week2/StudentInfo";
+import UserProfile from "app/Home/UserProfile";
 
 export default function Page() {
   return (
     <div>
-      <StudentInfo />
+      <UserProfile />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const StudentInfo = () => {
+const UserProfile = () => {
   const yourName = "Jinki Lee"; // Replace with your actual name
   const courseSection = "CPRG 306 F"; // Replace with your course section
   const githubRepoUrl = "https://github.com/jinki-lee"; // Replace with your GitHub repository URL
@@ -116,4 +116,4 @@ const StudentInfo = () => {
   );
 };
 
-export default StudentInfo;
+export default UserProfile;
