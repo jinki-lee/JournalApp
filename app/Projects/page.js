@@ -90,7 +90,7 @@ export default function Page() {
                     Youtube
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
-                  
+
                   <img
                     className="w-7 h-7 rounded-full"
                     src="https://www.svgrepo.com/show/452150/adobe-premiere.svg"
