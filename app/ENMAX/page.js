@@ -1,7 +1,9 @@
 import React from "react";
-import DemoSection from "./DemoSection"; // Adjust the path as necessary
-import TeamSection from "./TeamSection"; // Adjust the path as necessary
-import TimelineSection from "./TimelineSection"; // Adjust the path as necessary
+import DemoSection from "./DemoSection"; 
+import TeamSection from "./TeamSection"; 
+import TimelineSection from "./TimelineSection"; 
+import AchievementSection from "./AchievementSection"; 
+import QuestionSection from "./QuestionSection";
 
 
 export default function Page() {
@@ -10,6 +12,8 @@ export default function Page() {
       <DemoSection />
       <TeamSection />
       <TimelineSection />
+      <AchievementSection />
+      <QuestionSection />
     </main>
   );
 }
