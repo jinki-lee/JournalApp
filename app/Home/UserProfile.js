@@ -6,6 +6,7 @@ const UserProfile = () => {
   const githubRepoUrl = "https://github.com/jinki-lee"; // Replace with your GitHub repository URL
   const linkedInUrl = "https://www.linkedin.com/in/jinkilee/";
   const porfolioUrl = "https://jinkilee.ca";
+  const projectUrl = "/Projects";
   const journalUrl = "/Journal";
   const personalWebsiteUrl = "https://www.jinkilee.ca/";
   const instagramUrl = "https://www.instagram.com/jinki.jpeg/";
@@ -15,16 +16,23 @@ const UserProfile = () => {
 
   return (
     <main className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+
+      <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        {yourName}
+      </h1>
+      <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        {personalBio}
+      </p>
+
       <a
-        href={porfolioUrl}
-        target="_blank"
+        href={projectUrl}
         className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
         role="alert"
       >
         <span className="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3">
           New
         </span>{" "}
-        <span className="text-sm font-medium">My Website</span>
+        <span className="text-sm font-medium">My Projects</span>
         <svg
           className="ml-2 w-5 h-5"
           fill="currentColor"
@@ -38,18 +46,12 @@ const UserProfile = () => {
           ></path>
         </svg>
       </a>
-      <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-        {yourName}
-      </h1>
-      <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-        {personalBio}
-      </p>
 
       <section className="bg-white dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
           <div className="max-w-screen-md mb-8 lg:mb-16 mx-auto text-center">
             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white ">
-              Marking a Digital Footprint
+              Leaving a Digital Footprint
             </h2>
             <p className="text-gray-500 sm:text-xl dark:text-gray-400">
               Specializes in strategizing and implementing tech solutions to

@@ -2,16 +2,16 @@
 import React from "react";
 
 function Navbar() {
-
   const journalUrl = "/Journal";
   const enmaxUrl = "/";
   const mealUrl = "https://cprg306-assignments-coral.vercel.app/week10";
   const githubRepoUrl = "https://github.com/jinki-lee";
   const personalWebsiteUrl = "https://www.jinkilee.ca/";
+  const projectUrl = "/Projects";
   const instagramUrl = "https://www.instagram.com/jinki.jpeg/";
   const youtubeUrl = "https://www.youtube.com/channel/UCMADNoVufMJPluqkbkRQVoQ";
   const linkedInUrl = "https://www.linkedin.com/in/jinkilee/";
-  const spotifyUrl = "https://open.spotify.com/user/jinkiplease?si=a5ae5b87966b4ebc";
+  const spotifyUrl ="https://open.spotify.com/user/jinkiplease?si=a5ae5b87966b4ebc";
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
@@ -88,8 +88,16 @@ function Navbar() {
 
               <div
                 id="dropdownNavbar"
-                className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow lg:w-96 dark:bg-gray-700 dark:divide-gray-600"
               >
+                <div className="py-1">
+                  <a
+                    href={projectUrl}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    My Projects
+                  </a>
+                </div>
                 <ul
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownLargeButton"
@@ -106,6 +114,7 @@ function Navbar() {
                     <a
                       href={enmaxUrl}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      target="_blank"
                     >
                       ENMAX - IT Recognition Portal
                     </a>
@@ -114,22 +123,15 @@ function Navbar() {
                     <a
                       href={mealUrl}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      target="_blank"
                     >
                       Meal Idea App
                     </a>
                   </li>
                 </ul>
-                <div className="py-1">
-                  <a
-                    href={githubRepoUrl}
-                    target="_blank"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                  >
-                    My Github Repository
-                  </a>
-                </div>
               </div>
             </li>
+
             {/* Digital Profile */}
             <li>
               <button
@@ -159,19 +161,35 @@ function Navbar() {
                 id="dropdownNavbar2"
                 className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
+                <div className="py-1">
+                  <a
+                    href={personalWebsiteUrl}
+                    target="_blank"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    Personal Website
+                  </a>
+
+                  <a
+                    href={linkedInUrl}
+                    target="_blank"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    LinkedIn
+                  </a>
+
+                  <a
+                    href={githubRepoUrl}
+                    target="_blank"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >
+                    GitHub
+                  </a>
+                </div>
                 <ul
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
                   aria-labelledby="dropdownLargeButton"
                 >
-                  <li>
-                    <a
-                      href={personalWebsiteUrl}
-                      target="_blank"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                    >
-                      Personal Website
-                    </a>
-                  </li>
                   <li>
                     <a
                       href={instagramUrl}
@@ -200,16 +218,6 @@ function Navbar() {
                     </a>
                   </li>
                 </ul>
-
-                <div className="py-1">
-                  <a
-                    href={linkedInUrl}
-                    target="_blank"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
               </div>
             </li>
           </ul>
