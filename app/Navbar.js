@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   const journalUrl = "/Journal";
-  const enmaxUrl = "/";
+  const enmaxUrl = "/ENMAX";
   const mealUrl = "https://cprg306-assignments-coral.vercel.app/week10";
   const githubRepoUrl = "https://github.com/jinki-lee";
   const personalWebsiteUrl = "https://www.jinkilee.ca/";
@@ -114,7 +114,6 @@ function Navbar() {
                     <a
                       href={enmaxUrl}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      target="_blank"
                     >
                       ENMAX - IT Recognition Portal
                     </a>

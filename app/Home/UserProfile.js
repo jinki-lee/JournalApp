@@ -16,7 +16,6 @@ const UserProfile = () => {
 
   return (
     <main className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-
       <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         {yourName}
       </h1>
@@ -77,10 +76,11 @@ const UserProfile = () => {
               <a
                 href={personalWebsiteUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 Personal Website
               </a>
+
               <p className="text-gray-500 dark:text-gray-400">
                 Welcome to my personal website, where I showcase my journey and
                 skills as a Software & Web Developer. Explore my portfolio of
@@ -102,7 +102,7 @@ const UserProfile = () => {
               <a
                 href={linkedInUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 LinkedIn
               </a>
@@ -129,7 +129,7 @@ const UserProfile = () => {
               <a
                 href={githubRepoUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 Github
               </a>
@@ -155,7 +155,7 @@ const UserProfile = () => {
               <a
                 href={instagramUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 Instagram
               </a>
@@ -180,7 +180,7 @@ const UserProfile = () => {
               <a
                 href={youtubeUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 Youtube
               </a>
@@ -207,7 +207,7 @@ const UserProfile = () => {
               <a
                 href={spotifyUrl}
                 target="_blank"
-                className="mb-2 text-xl font-bold dark:text-white"
+                className="mb-2 text-xl font-bold text-gray-400 hover:text-black"
               >
                 Spotify
               </a>
