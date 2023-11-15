@@ -3,7 +3,7 @@ import DemoSection from "./DemoSection";
 import TeamSection from "./TeamSection"; 
 import TimelineSection from "./TimelineSection"; 
 import AchievementSection from "./AchievementSection"; 
-import QuestionSection from "./QuestionSection";
+import ProjectInfo from "./ProjectInfo";
 
 
 export default function Page() {
@@ -11,9 +11,9 @@ export default function Page() {
     <main>
       <DemoSection />
       <TeamSection />
+      <ProjectInfo />
       <TimelineSection />
       <AchievementSection />
-      <QuestionSection />
     </main>
   );
 }

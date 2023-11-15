@@ -17,7 +17,7 @@ function Navbar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center">
           <img
-            src="https://www.svgrepo.com/show/144189/rocket.svg"
+            src="/icon.png"
             className="h-10 mr-3"
             alt="Rocket Logo"
           />

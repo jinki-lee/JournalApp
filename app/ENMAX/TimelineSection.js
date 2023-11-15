@@ -2,10 +2,12 @@ import React from "react";
 
 export default function TimelineSection() {
   return (
-<section class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Timeline</h2>
+    <section class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Timeline
+      </h2>
 
-    <ol class="w-full items-center sm:flex">
+      <ol class="w-full items-center sm:flex">
         <li class="w-full relative mb-6 sm:mb-0">
           <div class="flex items-center">
             <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
@@ -21,15 +23,16 @@ export default function TimelineSection() {
             </div>
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
-          <div class="mt-3 sm:pe-8">
+          <div class="mt-3 sm:pe-8 h-[200px]">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              [Title of New Timeline Item]
+              Beginning My Journey at ENMAX
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              [Date of Item]
+              January 2023
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              [Description of the Timeline Item]
+              Joined ENMAX as a Digital Experience Co-op Student, embarking on
+              an exciting role.
             </p>
           </div>
         </li>
@@ -48,15 +51,16 @@ export default function TimelineSection() {
             </div>
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
-          <div class="mt-3 sm:pe-8">
+          <div class="mt-3 sm:pe-8 h-[200px]">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              [Title of New Timeline Item]
+              Spring / Summer Courses at SAIT
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              [Date of Item]
+              May 2023
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              [Description of the Timeline Item]
+              Continued Co-op at ENMAX while pursuing Spring/Summer courses at
+              SAIT, exploring valuable opportunities.
             </p>
           </div>
         </li>
@@ -75,15 +79,16 @@ export default function TimelineSection() {
             </div>
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
-          <div class="mt-3 sm:pe-8">
+          <div class="mt-3 sm:pe-8 h-[200px]">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              [Title of New Timeline Item]
+              Work Term and Ends
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              [Date of Item]
+              August 2023{" "}
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              [Description of the Timeline Item]
+              Successfully concluded the Co-op term at ENMAX, finalizing UI and
+              system designs.
             </p>
           </div>
         </li>
@@ -102,15 +107,16 @@ export default function TimelineSection() {
             </div>
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
-          <div class="mt-3 sm:pe-8">
+          <div class="mt-3 sm:pe-8 h-[200px]">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              [Title of New Timeline Item]
+              Capstone Project Begins{" "}
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              [Date of Item]
+              September 2023{" "}
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              [Description of the Timeline Item]
+              Kicked off a capstone project in partnership with SAIT, involving
+              SAIT student onboarding and project development.
             </p>
           </div>
         </li>
@@ -129,15 +135,16 @@ export default function TimelineSection() {
             </div>
             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
           </div>
-          <div class="mt-3 sm:pe-8">
+          <div class="mt-3 sm:pe-8 h-[200px]">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              [Title of New Timeline Item]
+              Project Completion{" "}
             </h3>
             <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              [Date of Item]
+              December 2023{" "}
             </time>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-              [Description of the Timeline Item]
+              Completed and presented the SAIT capstone project, concluding the
+              Fall courses with success.
             </p>
           </div>
         </li>
