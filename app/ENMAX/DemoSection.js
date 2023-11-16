@@ -4,7 +4,7 @@ export default function DemoSection() {
   return (
     <section class="bg-white dark:bg-gray-900">
       <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <iframe
+        <iframe class="w-full dark:hidden"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/NpEaa2P7qZI?si=Hhv2nU-sHWLNoSDZ"
