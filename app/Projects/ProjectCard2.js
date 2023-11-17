@@ -49,10 +49,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark4"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 C#
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -65,10 +65,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark5"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 HTML
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -81,10 +81,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark6"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 CSS
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -97,10 +97,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark7"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 ASP.NET
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -113,10 +113,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark8"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 Microsoft SQL Server
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -129,10 +129,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark9"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 Microsoft Visual Studio
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -145,10 +145,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark11"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 Figma
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
               <img
                 className="w-7 h-7 rounded-full"
@@ -161,10 +161,10 @@ export default function ProjectCard2() {
               <div
                 id="tooltip-dark12"
                 role="tooltip"
-                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
               >
                 Git
-                <div class="tooltip-arrow" data-popper-arrow></div>
+                <div className="tooltip-arrow" data-popper-arrow></div>
               </div>
             </div>
             <a

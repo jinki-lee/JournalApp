@@ -2,9 +2,9 @@ import React from "react";
 
 export default function DemoSection() {
   return (
-    <section class="bg-white dark:bg-gray-900">
-      <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <iframe class="w-full dark:hidden"
+    <section className="bg-white dark:bg-gray-900">
+      <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <iframe className="w-full dark:hidden"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/NpEaa2P7qZI?si=Hhv2nU-sHWLNoSDZ"
@@ -14,15 +14,15 @@ export default function DemoSection() {
           allowfullscreen
         ></iframe>
         <img
-          class="w-full hidden dark:block"
+          className="w-full hidden dark:block"
           src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
           alt="dashboard image"
         />
-        <div class="mt-4 md:mt-0">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        <div className="mt-4 md:mt-0">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             ENMAX IT Recognition Portal
           </h2>
-          <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
+          <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
             The ENMAX IT Recognition Portal is a web application that allows
             ENMAX employees to recognize each other for their hard work and
             dedication. The application is built using ASP.NET Core Web App. 
@@ -34,7 +34,7 @@ export default function DemoSection() {
           >
             View Demo
             <svg
-              class="ml-2 -mr-1 w-5 h-5"
+              className="ml-2 -mr-1 w-5 h-5"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"

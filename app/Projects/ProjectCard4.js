@@ -48,10 +48,10 @@ export default function ProjectCard4() {
         <div
           id="tooltip-dark13"
           role="tooltip"
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
           React
-          <div class="tooltip-arrow" data-popper-arrow></div>
+          <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
         <img
           className="w-7 h-7 rounded-full"
@@ -64,10 +64,10 @@ export default function ProjectCard4() {
         <div
           id="tooltip-dark14"
           role="tooltip"
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
           Next JS
-          <div class="tooltip-arrow" data-popper-arrow></div>
+          <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
         <img
           className="w-7 h-7 rounded-full"
@@ -80,10 +80,10 @@ export default function ProjectCard4() {
         <div
           id="tooltip-dark15"
           role="tooltip"
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
           npm
-          <div class="tooltip-arrow" data-popper-arrow></div>
+          <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
         <img
           className="w-7 h-7 rounded-full"
@@ -96,10 +96,10 @@ export default function ProjectCard4() {
         <div
           id="tooltip-dark16"
           role="tooltip"
-          class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
         >
           Node JS
-          <div class="tooltip-arrow" data-popper-arrow></div>
+          <div className="tooltip-arrow" data-popper-arrow></div>
         </div>
       </div>
       <a

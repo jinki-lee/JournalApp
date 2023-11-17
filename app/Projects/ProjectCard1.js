@@ -49,10 +49,10 @@ export default function ProjectCard1() {
      <div
        id="tooltip-dark"
        role="tooltip"
-       class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+       className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
      >
        Instagram
-       <div class="tooltip-arrow" data-popper-arrow></div>
+       <div className="tooltip-arrow" data-popper-arrow></div>
      </div>
 
      <img
@@ -66,10 +66,10 @@ export default function ProjectCard1() {
      <div
        id="tooltip-dark2"
        role="tooltip"
-       class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+       className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
      >
        Youtube
-       <div class="tooltip-arrow" data-popper-arrow></div>
+       <div className="tooltip-arrow" data-popper-arrow></div>
      </div>
 
      <img
@@ -83,10 +83,10 @@ export default function ProjectCard1() {
      <div
        id="tooltip-dark3"
        role="tooltip"
-       class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+       className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
      >
        Adobe Premiere Pro
-       <div class="tooltip-arrow" data-popper-arrow></div>
+       <div className="tooltip-arrow" data-popper-arrow></div>
      </div>
    </div>
    <a

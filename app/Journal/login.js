@@ -2,11 +2,11 @@ import React from 'react';
 import { useUserAuth } from './_utils/auth-context';
 
 const Login = () => {
-  const { gitHubSignIn } = useUserAuth();
+  const { googleSignIn } = useUserAuth(); // Change from gitHubSignIn to googleSignIn
 
   const handleSignIn = async () => {
     try {
-      await gitHubSignIn();
+      await googleSignIn(); // Change to use googleSignIn
     } catch (error) {
       console.error('Login failed:', error);
     }
@@ -43,7 +43,7 @@ const Login = () => {
             onClick={handleSignIn}
             className="inline-flex items-center justify-center border signInButton font-medium rounded-lg text-sm px-5 py-2.5 text-center my-4"
           >
-            Sign in with GitHub
+            Sign in with Google {/* Update the button text */}
           </button>
         </div>
       </div>

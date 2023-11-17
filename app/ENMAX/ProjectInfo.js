@@ -2,14 +2,14 @@ import React from "react";
 
 export default function ProjectInfo() {
   return (
-    <div class="mx-auto max-w-screen-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="mx-auto max-w-screen-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <ul
-        class="flex flex-col sm:flex-row text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800"
+        className="flex flex-col sm:flex-row text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800"
         id="defaultTab"
         data-tabs-toggle="#defaultTabContent"
         role="tablist"
       >
-        <li class="mb-2 sm:mb-0 sm:mr-2">
+        <li className="mb-2 sm:mb-0 sm:mr-2">
           <button
             id="overview-tab"
             data-tabs-target="#overview"
@@ -17,13 +17,13 @@ export default function ProjectInfo() {
             role="tab"
             aria-controls="overview"
             aria-selected="false"
-            class="inline-block w-full sm:w-auto p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+            className="inline-block w-full sm:w-auto p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
           >
             Purpose and Objectives
           </button>
         </li>
 
-        <li class="mb-2 sm:mb-0 sm:mr-2">
+        <li className="mb-2 sm:mb-0 sm:mr-2">
           <button
             id="technology-tab"
             data-tabs-target="#technology"
@@ -31,13 +31,13 @@ export default function ProjectInfo() {
             role="tab"
             aria-controls="technology"
             aria-selected="false"
-            class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+            className="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
           >
             Technology Stack
           </button>
         </li>
 
-        <li class="mb-2 sm:mb-0 sm:mr-2">
+        <li className="mb-2 sm:mb-0 sm:mr-2">
           <button
             id="requirements-tab"
             data-tabs-target="#requirements"
@@ -45,12 +45,12 @@ export default function ProjectInfo() {
             role="tab"
             aria-controls="requirements"
             aria-selected="false"
-            class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+            className="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
           >
             Functional Requirements
           </button>
         </li>
-        <li class="mb-2 sm:mb-0 sm:mr-2">
+        <li className="mb-2 sm:mb-0 sm:mr-2">
           <button
             id="capstone-tab"
             data-tabs-target="#capstone"
@@ -58,7 +58,7 @@ export default function ProjectInfo() {
             role="tab"
             aria-controls="capstone"
             aria-selected="true"
-            class="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
+            className="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
           >
             Capstone Partnership
           </button>
@@ -67,18 +67,18 @@ export default function ProjectInfo() {
       <div id="defaultTabContent">
         {/* Purpose and Objectives */}
         <div
-          class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+          className="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
           id="overview"
           role="tabpanel"
           aria-labelledby="overview-tab"
         >
-          <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             Develop a Recognition Portal
           </h2>
-          <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+          <ul role="list" className="space-y-4 text-gray-500 dark:text-gray-400">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -86,13 +86,13 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 Employee Recognition and Morale Boosting
               </span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -100,11 +100,11 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">Enhancing Company Culture</span>
+              <span className="leading-tight">Enhancing Company Culture</span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -112,11 +112,11 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">Performance Incentives</span>
+              <span className="leading-tight">Performance Incentives</span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -124,11 +124,11 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">Feedback and Development</span>
+              <span className="leading-tight">Feedback and Development</span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -136,13 +136,13 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">Tracking and Analytics</span>
+              <span className="leading-tight">Tracking and Analytics</span>
             </li>
           </ul>
         </div>
         {/* Technology Used */}
         <div
-          class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+          className="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
           id="technology"
           role="tabpanel"
           aria-labelledby="technology-tab"
@@ -158,7 +158,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-1">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-1"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-1"
@@ -166,7 +166,7 @@ export default function ProjectInfo() {
                 <span>ASP.NET Framework</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -174,9 +174,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -184,40 +184,40 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-1"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-1"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   For our group project, we chose ASP.NET MVC, a web application
                   framework by Microsoft. Renowned for implementing the
                   Model-View-Controller (MVC) design pattern, it was integral in
                   developing our dynamic, scalable web application.
                 </p>
                 <br />
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>
                     <u>MVC Architecture Breakdown:</u>
                   </b>
                 </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Model:</b> Our data and business logic layer. Here, we
                   managed data retrieval, processing, and other critical backend
                   functionalities.
                 </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>View:</b> This was our presentation layer, where we crafted
                   the user interface with HTML, CSS, and JavaScript. It
                   dynamically displayed data based on user interactions and
                   controller logic.
                 </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Controller:</b> Serving as the intermediary, controllers
                   managed user inputs, liaised with the Model for data
                   processing, and updated the Views with the results.
                 </p>
                 <br />
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   This architecture was pivotal in our team's workflow, allowing
                   us to work efficiently on different application aspects
                   simultaneously. It streamlined our development process,
@@ -235,7 +235,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-2">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-2"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-2"
@@ -243,7 +243,7 @@ export default function ProjectInfo() {
                 <span>User Experience and User Interface Design</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -251,9 +251,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -261,14 +261,14 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-2"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-2"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Figma</b>
                 </p>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   {" "}
                   In our group project, we effectively utilized Figma as a
                   collaborative design tool to create and refine the user
@@ -289,7 +289,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-3">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-3"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-3"
@@ -297,7 +297,7 @@ export default function ProjectInfo() {
                 <span>Git and Git Branching Strategy</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -305,9 +305,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -315,14 +315,14 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-3"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-3"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Branching Strategy:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     We implemented a structured Git branching strategy to
                     maintain an organized and efficient workflow. This involved
@@ -336,10 +336,10 @@ export default function ProjectInfo() {
                     remained stable and release-ready.
                   </li>
                 </ul>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Collaborative Coding and Code Review:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     With multiple developers, we used Git for version control to
                     track changes and manage code collaboratively. Code reviews
@@ -354,7 +354,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-4">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-4"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-4"
@@ -362,7 +362,7 @@ export default function ProjectInfo() {
                 <span>Agile Management and Serverless Architecture</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -370,9 +370,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -380,24 +380,24 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-4"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-4"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Agile Methodology:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     Adopting Agile principles, we managed our workflows in Azure
                     DevOps, effectively planning sprints, and tracking the
                     development progress.
                   </li>
                 </ul>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Serverless Backend with Azure Functions:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     Azure Functions facilitated a scalable, event-driven backend
                     architecture. This serverless computing solution allowed us
@@ -412,7 +412,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-5">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-5"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-5"
@@ -420,7 +420,7 @@ export default function ProjectInfo() {
                 <span>Hosting Repositories in Azure DevOps</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -428,9 +428,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -438,14 +438,14 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-5"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-5"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Centralized Repository Management:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     We hosted our Git repositories in Azure DevOps, which
                     provided a centralized platform for our source code. Azure
@@ -453,10 +453,10 @@ export default function ProjectInfo() {
                     access control, and integration with other services.
                   </li>
                 </ul>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Continuous Integration/Continuous Deployment (CI/CD):</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     Azure DevOps enabled us to set up CI/CD pipelines. Every
                     code commit triggered an automated build and test process,
@@ -471,7 +471,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-6">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                className="flex items-center justify-between w-full py-5 font-medium text-left rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                 data-accordion-target="#accordion-flush-body-6"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-6"
@@ -479,7 +479,7 @@ export default function ProjectInfo() {
                 <span>Development and Database Management</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -487,9 +487,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -497,14 +497,14 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-6"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-6"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Microsoft Visual Studio:</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     As our main integrated development environment, Visual
                     Studio offered comprehensive tools for coding, debugging,
@@ -512,10 +512,10 @@ export default function ProjectInfo() {
                     efficiency and quality.
                   </li>
                 </ul>
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   <b>Microsoft SQL Server Management Studio (SSMS):</b>
                 </p>
-                <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+                <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
                     SSMS was pivotal for our database management. It provided an
                     efficient platform for configuring, managing, and
@@ -532,18 +532,18 @@ export default function ProjectInfo() {
 
         {/* Functional Requirements */}
         <div
-          class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+          className="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
           id="requirements"
           role="tabpanel"
           aria-labelledby="requirements-tab"
         >
-          <h2 class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             As a user I want to...
           </h2>
-          <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+          <ul role="list" className="space-y-4 text-gray-500 dark:text-gray-400">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -551,13 +551,13 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 easily send and receive recognition and points.
               </span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -565,14 +565,14 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 {" "}
                 track my points and transaction history.
               </span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -580,13 +580,13 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 enjoy a user-friendly interface for all portal activities.
               </span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -594,14 +594,14 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 choose from a variety of rewards, including gift cards and
                 company swag.
               </span>
             </li>
-            <li class="flex space-x-2 rtl:space-x-reverse items-center">
+            <li className="flex space-x-2 rtl:space-x-reverse items-center">
               <svg
-                class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+                className="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -609,7 +609,7 @@ export default function ProjectInfo() {
               >
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
               </svg>
-              <span class="leading-tight">
+              <span className="leading-tight">
                 add items to my cart for quick redemption of my rewards points.
               </span>
             </li>
@@ -618,12 +618,12 @@ export default function ProjectInfo() {
 
         {/* capstone */}
         <div
-          class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+          className="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
           id="capstone"
           role="tabpanel"
           aria-labelledby="capstone-tab"
         >
-          <h2 class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             SAIT Capstone Project Partnership with ENMAX
           </h2>
 
@@ -636,7 +636,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-11">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+                className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
                 data-accordion-target="#accordion-flush-body-11"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-11"
@@ -644,7 +644,7 @@ export default function ProjectInfo() {
                 <span>What is a Capstone?</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -652,9 +652,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -662,11 +662,11 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-11"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-11"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   At SAIT, students benefit from a quality curriculum, delivered
                   by instructors, featuring a balanced academic diet of theory
                   and hands-on practice. The successful completion of a project
@@ -681,11 +681,11 @@ export default function ProjectInfo() {
                   satisfaction. Completion of this course prepares students for
                   successful entry into PROJ 309, Capstone Project.
                 </p>
-                <p class="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-500 dark:text-gray-400">
                   <a
                     href="https://www.sait.ca/sait-schools/school-for-advanced-digital-technology/industry-connections"
                     target="_blank"
-                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                    className="text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Learn more </a>
                   about industry connections.{" "}
@@ -695,7 +695,7 @@ export default function ProjectInfo() {
             <h2 id="accordion-flush-heading-12">
               <button
                 type="button"
-                class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+                className="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
                 data-accordion-target="#accordion-flush-body-12"
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-12"
@@ -703,7 +703,7 @@ export default function ProjectInfo() {
                 <span>How did we partner with ENMAX?</span>
                 <svg
                   data-accordion-icon
-                  class="w-3 h-3 rotate-180 shrink-0"
+                  className="w-3 h-3 rotate-180 shrink-0"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -711,9 +711,9 @@ export default function ProjectInfo() {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
@@ -721,11 +721,11 @@ export default function ProjectInfo() {
             </h2>
             <div
               id="accordion-flush-body-12"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-flush-heading-12"
             >
-              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 dark:text-gray-400">
+              <div className="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p className="mb-2 text-gray-500 dark:text-gray-400">
                   {" "}
                   ENMAX Corporation, a leader in utility services, has been a
                   significant collaborator in our educational journey at SAIT,
@@ -751,11 +751,11 @@ export default function ProjectInfo() {
                   <a
                     href="https://sway.office.com/cUCSN8ErMVeOv633?ref=Link&loc=mysways"
                     target="_blank"
-                    class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
+                    className="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
                   >
                     View my coop experience
                     <svg
-                      class=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
+                      className=" w-2.5 h-2.5 ms-2 rtl:rotate-180"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -763,9 +763,9 @@ export default function ProjectInfo() {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="m1 9 4-4-4-4"
                       />
                     </svg>
