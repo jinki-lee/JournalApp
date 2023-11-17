@@ -1,24 +1,37 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import NewJournalEntry from './journal-list/NewJournalEntry'; // Renamed import
-import JournalEntryList from './journal-list/JournalEntryList'; // Renamed import
-import Login from './login';
-import { useUserAuth } from './_utils/auth-context';
+import React, { useState, useEffect } from "react";
+import NewJournalEntry from "./journal-list/NewJournalEntry"; // Renamed import
+import JournalEntryList from "./journal-list/JournalEntryList"; // Renamed import
+import Login from "./login";
+import { useUserAuth } from "./_utils/auth-context";
 import { db } from "./_utils/firebase";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 
 // getJournalEntries function to fetch journal entries from Firestore
 async function getJournalEntries(userId) {
-  const journalCollectionRef = collection(db, 'users', userId, 'journalEntries');
+  const journalCollectionRef = collection(
+    db,
+    "users",
+    userId,
+    "journalEntries"
+  );
   const journalSnapshot = await getDocs(journalCollectionRef);
-  const journalEntries = journalSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  const journalEntries = journalSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
   return journalEntries;
 }
 
 // addJournalEntry function to add a new journal entry to Firestore
 async function addJournalEntry(userId, newEntry) {
-  const journalCollectionRef = collection(db, 'users', userId, 'journalEntries');
+  const journalCollectionRef = collection(
+    db,
+    "users",
+    userId,
+    "journalEntries"
+  );
   const docRef = await addDoc(journalCollectionRef, newEntry);
   return { id: docRef.id, ...newEntry };
 }
@@ -63,40 +76,48 @@ export default function Page() {
 
   return (
     <main>
-      <div style={{ 
-        textAlign: 'right',
-        paddingRight: '20px',
-      }}>
-        <p>Welcome, {user.displayName}
-          <br />
-          ({user.email})</p>
+      <div
+        style={{
+          textAlign: "right",
+          paddingRight: "20px",
+        }}
+      >
+        <p>
+          Welcome, {user.displayName}
+          <br />({user.email})
+        </p>
         <br />
-        <button 
+        <button
           onClick={() => firebaseSignOut()}
-          style={{ 
-            backgroundColor: 'transparent',
-            color: 'red',
-            cursor: 'pointer',
-            border: '2px solid red',
-            padding: '10px 20px',
-            borderRadius: '5px',
-            transition: 'all 0.3s',
-            outline: 'none',
+          style={{
+            backgroundColor: "transparent",
+            color: "red",
+            cursor: "pointer",
+            border: "2px solid red",
+            padding: "10px 20px",
+            borderRadius: "5px",
+            transition: "all 0.3s",
+            outline: "none",
           }}
-          onMouseOver={e => {
-            e.target.style.backgroundColor = 'red';
-            e.target.style.color = 'white';
+          onMouseOver={(e) => {
+            e.target.style.backgroundColor = "red";
+            e.target.style.color = "white";
           }}
-          onMouseOut={e => {
-            e.target.style.backgroundColor = 'transparent';
-            e.target.style.color = 'red';
+          onMouseOut={(e) => {
+            e.target.style.backgroundColor = "transparent";
+            e.target.style.color = "red";
           }}
         >
           Sign out
         </button>
       </div>
-      <NewJournalEntry onAddEntry={handleAddJournalEntry} /> {/* Rename component */}
-      <JournalEntryList entries={journalEntries} onEntrySelect={handleEntrySelect} /> {/* Rename component */}
+      <NewJournalEntry onAddEntry={handleAddJournalEntry} />{" "}
+      {/* Rename component */}
+      <JournalEntryList
+        entries={journalEntries}
+        onEntrySelect={handleEntrySelect}
+      />{" "}
+      {/* Rename component */}
       {/* Render the selected entry's content */}
       {selectedEntry && (
         <div className="journal-entry-content">

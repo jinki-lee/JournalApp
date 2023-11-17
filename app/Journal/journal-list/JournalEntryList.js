@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import Heading from "./heading";
 import JournalEntry from "./JournalEntry";
 
 export default function JournalEntryList({ entries, onEntrySelect }) {
@@ -28,87 +27,99 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
 
   return (
     <>
-      <div className="mx-4 sm:mx-0 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center">
-        <div className="flex-grow sm:w-1/3 w-full">
-          <label htmlFor="selectMonth" className="self-center">
-            Filter by Month:
-          </label>
-          <select
-            id="selectMonth"
-            value={selectedMonth}
-            onChange={(e) => setSelectedMonth(parseInt(e.target.value))}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option value="">All Months</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-        </div>
+<div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+  <div className="flex">
+    {/* <!-- Filter by Month --> */}
+    <div className="flex-grow sm:w-1/2 w-full mr-4">
+      <label htmlFor="selectMonth" className="self-center">
+        Filter by Month:
+      </label>
+      <select
+        id="selectMonth"
+        value={selectedMonth}
+        onChange={(e) => setSelectedMonth(parseInt(e.target.value))}
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option value="">All Months</option>
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+    </div>
 
-        <div className="flex-grow sm:w-1/3 w-full">
-          <label htmlFor="selectYear" className="self-center">
-            Filter by Year:
-          </label>
-          <select
-            id="selectYear"
-            value={selectedYear}
-            onChange={(e) => setSelectedYear(parseInt(e.target.value))}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option value="">All Years</option>
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            {/* Add options for other years */}
-          </select>
-        </div>
-      </div>
+    {/* <!-- Filter by Year --> */}
+    <div className="flex-grow sm:w-1/2 w-full">
+      <label htmlFor="selectYear" className="self-center">
+        Filter by Year:
+      </label>
+      <select
+        id="selectYear"
+        value={selectedYear}
+        onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option value="">All Years</option>
+        <option value="2024">2023</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+        {/* Add options for other years */}
+      </select>
+    </div>
+  </div>
+</div>
 
-      <Heading title="Journal Entries" />
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead>
+
+<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th className="px-6 py-3 bg-gray-50 font-bold text-left text-gray-500 uppercase tracking-wider">
-                Date
-              </th>
-              <th className="px-6 py-3 bg-gray-50 font-bold text-left text-gray-500 uppercase tracking-wider">
-                Title
-              </th>
-              <th className="px-6 py-3 bg-gray-50 font-bold text-left text-gray-500 uppercase tracking-wider">
-                Content
-              </th>
+                <th scope="col" className="px-6 py-3">
+                    Date
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Title
+                </th>
+                <th scope="col" className="px-6 py-3">
+                    Content
+                </th>
             </tr>
-          </thead>
-          <tbody>
+        </thead>
+        <tbody>
             {filteredEntries.length === 0 ? (
-              <tr>
-                <td colSpan="3" className="text-center py-4">
-                  No journal entries found.
-                </td>
-              </tr>
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <td colSpan="3" className="px-6 py-4 text-center">
+                        No journal entries found.
+                    </td>
+                </tr>
             ) : (
-              filteredEntries.map((entry) => (
-                <JournalEntry
-                  entry={entry}
-                  key={entry.id}
-                  onSelect={onEntrySelect}
-                />
-              ))
+                filteredEntries.map((entry) => (
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {entry.date}
+                        </th>
+                        <td className="px-6 py-4">
+                            {entry.title}
+                        </td>
+                        <td className="px-6 py-4">
+                            {entry.content}
+                        </td>
+                    </tr>
+                ))
             )}
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+    </table>
+</div>
+
     </>
   );
 }
