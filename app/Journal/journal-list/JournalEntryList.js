@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import JournalEntry from "./JournalEntry";
 
 export default function JournalEntryList({ entries, onEntrySelect }) {
   const [selectedMonth, setSelectedMonth] = useState("");
@@ -68,7 +67,7 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
         className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         <option value="">All Years</option>
-        <option value="2024">2023</option>
+        <option value="2024">2024</option>
         <option value="2023">2023</option>
         <option value="2022">2022</option>
         {/* Add options for other years */}
@@ -80,8 +79,8 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
 
 
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table className="w-full text-sm text-left text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg">
+        <thead className="text-xs uppercase bg-gray-50 dark:bg-gray-700">
             <tr>
                 <th scope="col" className="px-6 py-3">
                     Date
@@ -92,26 +91,42 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
                 <th scope="col" className="px-6 py-3">
                     Content
                 </th>
+                <th scope="col" className="px-6 py-3">
+                    Songs
+                </th>
             </tr>
         </thead>
         <tbody>
             {filteredEntries.length === 0 ? (
-                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    <td colSpan="3" className="px-6 py-4 text-center">
+                <tr>
+                    <td colSpan="4" className="px-6 py-4 text-center">
                         No journal entries found.
                     </td>
                 </tr>
             ) : (
                 filteredEntries.map((entry) => (
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <tr className="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <td className="px-6 py-4">
                             {entry.date}
-                        </th>
+                        </td>
                         <td className="px-6 py-4">
                             {entry.title}
                         </td>
                         <td className="px-6 py-4">
-                            {entry.content}
+                            {entry.content.length > 50 ? `${entry.content.substring(0, 50)}...` : entry.content}
+                        </td>
+                        <td className="px-6 py-4">
+                            {entry.youtubeLinks && entry.youtubeLinks.length > 0 ? (
+                              entry.youtubeLinks.map((link, index) => (
+                                <div key={index} className="text-blue-600 hover:text-blue-800 mb-1 truncate">
+                                  <a href={link} target="_blank" rel="noopener noreferrer">
+                                    Song {index + 1}
+                                  </a>
+                                </div>
+                              ))
+                            ) : (
+                              <span className="text-gray-500">No links</span>
+                            )}
                         </td>
                     </tr>
                 ))
@@ -119,6 +134,7 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
         </tbody>
     </table>
 </div>
+
 
     </>
   );
