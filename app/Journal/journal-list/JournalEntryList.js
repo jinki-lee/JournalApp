@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from "react";
 import axios from "axios";
+import YouTubeModal from "./YoutubeModal"; // Adjust the path as necessary
 
 const fetchYouTubeTitle = async (url) => {
   const videoId = extractYouTubeVideoId(url);
@@ -25,9 +26,11 @@ const extractYouTubeVideoId = (url) => {
   return match && match[2].length === 11 ? match[2] : null;
 };
 
-export default function JournalEntryList({ entries, onEntrySelect }) {
+export default function JournalEntryList({ entries}) {
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
+  const [modalUrl, setModalUrl] = useState('');
+
   // Helper function to determine if a URL is a YouTube link
   const isYoutubeLink = (url) => {
     return extractYouTubeVideoId(url) !== null;
@@ -51,6 +54,26 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
 
     return tempEntries;
   }, [entries, selectedMonth, selectedYear]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState("");
+
+  const showModalWithContent = async (link) => {
+    if (isYoutubeLink(link)) {
+      const title = await fetchYouTubeTitle(link);
+      setModalContent(`Video Title: ${title}`);
+    } else {
+      // If it's not a YouTube link, just display the link text
+      setModalContent(link);
+    }
+    setModalUrl(link);
+    setIsModalOpen(true);
+  };
+  
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -145,19 +168,12 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
                           key={index}
                           className="text-blue-600 hover:text-blue-800 mb-1 truncate"
                         >
-                          {isYoutubeLink(link) ? (
-                            <span
-                              onClick={async () => {
-                                const title = await fetchYouTubeTitle(link);
-                                alert(`Video Title: ${title}`);
-                              }}
-                              className="cursor-pointer"
-                            >
-                              Link {index + 1}
-                            </span>
-                          ) : (
-                            <span>{link}</span> // Display the input text if not a YouTube link
-                          )}
+                          <span
+                            onClick={() => showModalWithContent(link)}
+                            className="cursor-pointer"
+                          >
+                            Music Link {index + 1}
+                          </span>
                         </div>
                       ))
                     ) : (
@@ -170,6 +186,13 @@ export default function JournalEntryList({ entries, onEntrySelect }) {
           </tbody>
         </table>
       </div>
+
+      <YouTubeModal
+        isOpen={isModalOpen}
+        content={modalContent}
+        onClose={closeModal}
+        url={modalUrl}
+      />
     </>
   );
 }
