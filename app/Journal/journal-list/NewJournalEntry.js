@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Alert from "./alert";
 
 export default function NewJournalEntry({ onAddEntry }) {
   const currentDate = new Date();
