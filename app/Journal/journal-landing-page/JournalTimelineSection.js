@@ -273,6 +273,11 @@ export default function JournalTimelineSection() {
           src="/peru-uncovered-map.png"
           alt="office content 1"
         />
+                <img
+          className="w-full rounded-lg"
+          src="/peru-uncovered-map.png"
+          alt="office content 1"
+        />
       </div>
     </div>
   );

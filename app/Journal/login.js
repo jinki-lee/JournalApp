@@ -4,6 +4,7 @@ import JournalInfoSection from "./journal-landing-page/JournalInfoSection";
 import JournalFeatureSection from "./journal-landing-page/JournalFeatureSection";
 import JournalVideoSection from "./journal-landing-page/JournalVideoSection";
 import JournalTimelineSection from "./journal-landing-page/JournalTimelineSection";
+import JournalTripInfoSection from "./journal-landing-page/JournalTripInfoSection";
 
 const Login = () => {
   const { googleSignIn } = useUserAuth(); // Change from gitHubSignIn to googleSignIn
@@ -199,6 +200,7 @@ const Login = () => {
       <JournalInfoSection />
       <JournalFeatureSection />
       <JournalVideoSection />
+      <JournalTripInfoSection />
       <JournalTimelineSection />
     </main>
   );
