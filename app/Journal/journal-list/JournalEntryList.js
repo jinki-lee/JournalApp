@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import axios from "axios";
-import YouTubeModal from "./YoutubeModal"; // Adjust the path as necessary
+import JournalModal from "./JournalModal"; // Adjust the path as necessary
 
 const fetchYouTubeTitle = async (url) => {
   const videoId = extractYouTubeVideoId(url);
@@ -187,7 +187,7 @@ export default function JournalEntryList({ entries}) {
         </table>
       </div>
 
-      <YouTubeModal
+      <JournalModal
         isOpen={isModalOpen}
         content={modalContent}
         onClose={closeModal}

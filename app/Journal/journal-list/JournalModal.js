@@ -1,6 +1,6 @@
 import React from 'react';
 
-const YouTubeModal = ({ isOpen, content, onClose, url }) => {
+const JournalModal = ({ isOpen, content, onClose, url }) => {
   if (!isOpen) return null;
 
   const isYoutubeLink = (url) => {
@@ -39,4 +39,4 @@ const YouTubeModal = ({ isOpen, content, onClose, url }) => {
   );
 };
 
-export default YouTubeModal;
+export default JournalModal;
