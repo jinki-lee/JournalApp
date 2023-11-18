@@ -26,15 +26,19 @@ const extractYouTubeVideoId = (url) => {
   return match && match[2].length === 11 ? match[2] : null;
 };
 
-export default function JournalEntryList({ entries}) {
+export default function JournalEntryList({ entries }) {
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-  const [modalUrl, setModalUrl] = useState('');
+  const [modalUrl, setModalUrl] = useState("");
+  const [selectedEntry, setSelectedEntry] = useState(null); // New state variable
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState("");
 
   // Helper function to determine if a URL is a YouTube link
   const isYoutubeLink = (url) => {
     return extractYouTubeVideoId(url) !== null;
   };
+
   let filteredEntries = useMemo(() => {
     let tempEntries = [...entries];
 
@@ -55,18 +59,26 @@ export default function JournalEntryList({ entries}) {
     return tempEntries;
   }, [entries, selectedMonth, selectedYear]);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState("");
-
-  const showModalWithContent = async (link) => {
-    if (isYoutubeLink(link)) {
-      const title = await fetchYouTubeTitle(link);
-      setModalContent(`Video Title: ${title}`);
+  const showModalWithContent = async (entry) => {
+    // Set the selected entry when "View" is clicked
+    setSelectedEntry(entry);
+  
+    // Check if entry has youtubeLinks and at least one link
+    if (entry.youtubeLinks && entry.youtubeLinks.length > 0) {
+      // Extract the YouTube title and URL from the selected entry
+      if (isYoutubeLink(entry.youtubeLinks[0])) {
+        const title = await fetchYouTubeTitle(entry.youtubeLinks[0]);
+        setModalContent(`Date: ${entry.date}\nTitle: ${entry.title}\nContent: ${entry.content}\nVideo Title: ${title}`);
+      } else {
+        // If it's not a YouTube link, just display the entry's text
+        setModalContent(`Date: ${entry.date}\nTitle: ${entry.title}\nContent: ${entry.content}`);
+      }
+      setModalUrl(entry.youtubeLinks[0]);
     } else {
-      // If it's not a YouTube link, just display the link text
-      setModalContent(link);
+      // Handle the case where there are no YouTube links
+      setModalContent(`Date: ${entry.date}\nTitle: ${entry.title}\nContent: ${entry.content}`);
+      setModalUrl(''); // Set an empty URL or handle it as needed
     }
-    setModalUrl(link);
     setIsModalOpen(true);
   };
   
@@ -137,48 +149,30 @@ export default function JournalEntryList({ entries}) {
                 Title
               </th>
               <th scope="col" className="px-6 py-3">
-                Content
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Songs
-              </th>
+                Actions
+              </th> {/* New column for "View" button */}
             </tr>
           </thead>
           <tbody>
             {filteredEntries.length === 0 ? (
               <tr>
-                <td colSpan="4" className="px-6 py-4 text-center">
+                <td colSpan="3" className="px-6 py-4 text-center">
                   No journal entries found.
                 </td>
               </tr>
             ) : (
               filteredEntries.map((entry) => (
-                <tr className="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
+                <tr className="border-b hover:bg-gray-100 dark:hover:bg-gray-700" key={entry.id}>
                   <td className="px-6 py-4">{entry.date}</td>
                   <td className="px-6 py-4">{entry.title}</td>
                   <td className="px-6 py-4">
-                    {entry.content.length > 50
-                      ? `${entry.content.substring(0, 50)}...`
-                      : entry.content}
-                  </td>
-                  <td className="px-6 py-4">
-                    {entry.youtubeLinks && entry.youtubeLinks.length > 0 ? (
-                      entry.youtubeLinks.map((link, index) => (
-                        <div
-                          key={index}
-                          className="text-blue-600 hover:text-blue-800 mb-1 truncate"
-                        >
-                          <span
-                            onClick={() => showModalWithContent(link)}
-                            className="cursor-pointer"
-                          >
-                            Music Link {index + 1}
-                          </span>
-                        </div>
-                      ))
-                    ) : (
-                      <span className="text-gray-500">No links</span>
-                    )}
+                    {/* Add "View" button */}
+                    <button
+                      onClick={() => showModalWithContent(entry)}
+                      className="text-blue-600 hover:text-blue-800 mb-1 truncate"
+                    >
+                      View
+                    </button>
                   </td>
                 </tr>
               ))
@@ -187,6 +181,7 @@ export default function JournalEntryList({ entries}) {
         </table>
       </div>
 
+      {/* Modify JournalModal to display selected entry */}
       <JournalModal
         isOpen={isModalOpen}
         content={modalContent}
