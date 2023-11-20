@@ -1,63 +1,43 @@
 import React from 'react';
 
-const JournalModal = ({ isOpen, content, onClose, url }) => {
-  if (!isOpen) return null;
-
-  const isYoutubeLink = (url) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    return match && match[2].length === 11;
-  };
-
-  const goToLink = () => {
-    if (isYoutubeLink(url)) {
-      window.open(url, '_blank');
-    }
-  };
+const JournalModal = ({ isOpen, entry, onClose }) => {
+  if (!isOpen || !entry) return null;
 
   return (
-    <div
-      id="popup-modal"
-      tabIndex="-1"
-      className="fixed inset-0 flex items-center justify-center z-50 backdrop-filter backdrop-blur-sm"
-    >
-      <div className="w-full max-w-lg bg-white rounded-lg shadow-lg dark:bg-gray-700">
-        {/* Close Icon Button */}
-        <button
-          onClick={onClose}
-          type="button"
-          className="absolute top-3 right-3 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-700"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-          <span className="sr-only">Close</span>
-        </button>
-        <div className="p-4 md:p-5 text-center">
-          <h3 className="mb-5 text-lg font-semibold text-gray-700 dark:text-gray-300">
-            {content}
+    <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-filter backdrop-blur-sm">
+      <div className="relative p-4 w-full max-w-lg bg-white rounded-lg shadow dark:bg-gray-700">
+        {/* Modal Header */}
+        <div className="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            Journal Entry
           </h3>
-          {isYoutubeLink(url) && (
-            <button
-              onClick={goToLink}
-              type="button"
-              className="text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 mr-2"
-            >
-              Go to Video
-            </button>
+          <button onClick={onClose} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-2 dark:hover:bg-gray-600 dark:hover:text-white">
+            {/* Close Icon */}
+          </button>
+        </div>
+        {/* Modal Body */}
+        <div className="p-4 space-y-4">
+          <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+            Date: {entry.date}<br />
+            Title: {entry.title}<br />
+            Content: {entry.content}
+          </p>
+          {entry.songTitle && entry.songTitle.length > 0 && (
+            <div>
+              <h4 className="font-semibold">Songs:</h4>
+              <ul>
+                {entry.songTitle.map((link, index) => (
+                  <li key={index}>{link}</li>
+                ))}
+              </ul>
+            </div>
           )}
-          {/* Optional: Include a Close button as text in addition to the icon */}
+        </div>
+        {/* Modal Footer */}
+        <div className="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600">
+          <button onClick={onClose} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Close
+          </button>
         </div>
       </div>
     </div>

@@ -4,44 +4,21 @@ export default function NewJournalEntry({ onAddEntry }) {
   const currentDate = new Date();
   const formattedDate = currentDate.toISOString().split("T")[0]; // Format as yyyy-MM-dd
   const [date, setDate] = useState(formattedDate); // Set the initial state to today's date
-
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [showAlert, setShowAlert] = useState(false);
-  const [youtubeLinks, setYoutubeLinks] = useState([]);
+  const [songTitle, set] = useState([]);
   const [currentLink, setCurrentLink] = useState("");
 
-  const addYoutubeLink = () => {
-    if (youtubeLinks.length < 3 && currentLink) {
-      setYoutubeLinks([...youtubeLinks, currentLink]);
+  const addSong = () => {
+    if (songTitle.length < 3 && currentLink) {
+      set([...songTitle, currentLink]);
       setCurrentLink(""); // Reset the input field after adding
     }
   };
 
   const removeYoutubeLink = (index) => {
-    setYoutubeLinks(youtubeLinks.filter((_, idx) => idx !== index));
-  };
-
-  // Helper function to check if a string is a valid URL
-  const isValidHttpUrl = (string) => {
-    let url;
-
-    try {
-      url = new URL(string);
-    } catch (_) {
-      return false;
-    }
-
-    return url.protocol === "http:" || url.protocol === "https:";
-  };
-
-  // Helper function to check if a URL is a YouTube link
-  const isYoutubeLink = (url) => {
-    const youtubeDomains = ["youtube.com", "youtu.be"];
-    return (
-      isValidHttpUrl(url) &&
-      youtubeDomains.some((domain) => url.includes(domain))
-    );
+    set(songTitle.filter((_, idx) => idx !== index));
   };
 
   const handleSubmit = (event) => {
@@ -55,10 +32,10 @@ export default function NewJournalEntry({ onAddEntry }) {
     }
 
     const newEntry = {
-      date: date,
-      title: title,
-      content: content,
-      youtubeLinks: youtubeLinks,
+      date,
+      title,
+      content,
+      songTitle,
     };
 
     onAddEntry(newEntry);
@@ -67,7 +44,7 @@ export default function NewJournalEntry({ onAddEntry }) {
     setDate(formattedDate);
     setTitle("");
     setContent("");
-    setYoutubeLinks([]);
+    set([]);
 
     // Automatically hide the alert after 3 seconds
     setTimeout(() => {
@@ -84,8 +61,8 @@ export default function NewJournalEntry({ onAddEntry }) {
       )}
 
       <main className="py-8 px-4 mx-auto max-w-4xl lg:py-8">
-        <h1 class="mb-8 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+        <h1 className="mb-8 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
             Journal
           </span>{" "}
           App
@@ -126,6 +103,7 @@ export default function NewJournalEntry({ onAddEntry }) {
               <input
                 type="text"
                 id="title"
+                maxLength={30}
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -156,20 +134,12 @@ export default function NewJournalEntry({ onAddEntry }) {
             </div>
             <div className="sm:col-span-2">
               <label
-                htmlFor="content"
+                htmlFor="add"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Song(s)
               </label>
-              <label
-                htmlFor="add"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-              ></label>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-                Add up to three songs that relate to how you feel in this
-                moment...
-              </p>
-              <div className="relative mb-4">
+              <div className="relative">
                 <input
                   type="text"
                   id="add"
@@ -178,46 +148,29 @@ export default function NewJournalEntry({ onAddEntry }) {
                   onKeyDown={(e) => {
                     if (e.key === "Enter") {
                       e.preventDefault();
+                      addSong();
                     }
                   }}
-                  className="block w-full p-4 ps-14 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full p-4 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Song name or Youtube link"
                 />
                 <button
-                  onClick={addYoutubeLink}
-                  disabled={youtubeLinks.length >= 3}
+                  onClick={addSong}
                   type="button"
-                  className={`text-white absolute end-2.5 bottom-2.5 font-medium rounded-lg text-sm px-4 py-2 focus:ring-4 focus:outline-none focus:ring-blue-300 ${
-                    youtubeLinks.length >= 3
-                      ? "bg-gray-500 hover:bg-gray-600 dark:bg-gray-700 dark:hover:bg-gray-800" // Color when 3 links are added
-                      : "bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700" // Default color
-                  }`}
+                  className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Add
                 </button>
-                {/* Small message below the input */}
               </div>
             </div>
 
-            {/* Display added YouTube links with a remove option */}
-            <div className="mt-4">
-              {youtubeLinks.map((link, index) => (
+            <div className="sm:col-span-2">
+              {songTitle.map((link, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-between bg-gray-100 p-3 rounded-lg mb-2 shadow-sm"
                 >
-                  {isYoutubeLink(link) ? (
-                    <a
-                      href={link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 truncate"
-                    >
-                      {link}
-                    </a>
-                  ) : (
-                    <span className="text-gray-800 truncate">{link}</span>
-                  )}
+                  <span className="text-gray-800 truncate">{link}</span>
                   <button
                     onClick={() => removeYoutubeLink(index)}
                     type="button"
