@@ -13,7 +13,7 @@ const UserProfile = () => {
   const youtubeUrl = "https://www.youtube.com/channel/UCMADNoVufMJPluqkbkRQVoQ";
 
   return (
-    <main className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
       <section>
       <h1 className="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
           {yourName}
@@ -190,7 +190,7 @@ const UserProfile = () => {
           </p>{" "}
         </div>
       </section>
-    </main>
+    </div>
   );
 };
 

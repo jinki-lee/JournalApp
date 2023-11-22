@@ -12,7 +12,7 @@ export default function JournalVideoSection() {
             height="315"
             src="https://www.youtube.com/embed/NpEaa2P7qZI?si=Hhv2nU-sHWLNoSDZ"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
@@ -48,7 +48,7 @@ export default function JournalVideoSection() {
             height="315"
             src="https://www.youtube.com/embed/NpEaa2P7qZI?si=Hhv2nU-sHWLNoSDZ"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
