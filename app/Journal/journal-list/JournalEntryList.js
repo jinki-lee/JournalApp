@@ -78,7 +78,7 @@ export default function JournalEntryList({ entries }) {
         </div>
       </div>
 
-      <div className="px-4 mx-auto max-w-2xl lg:py-16">
+      <div className="px-4 mx-auto max-w-3xl lg:py-16">
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg">
             <thead className="text-xs uppercase bg-gray-50 dark:bg-gray-700">

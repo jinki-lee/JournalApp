@@ -17,7 +17,7 @@ export default function NewJournalEntry({ onAddEntry }) {
     }
   };
 
-  const removeYoutubeLink = (index) => {
+  const removeSong = (index) => {
     set(songTitle.filter((_, idx) => idx !== index));
   };
 
@@ -137,7 +137,7 @@ export default function NewJournalEntry({ onAddEntry }) {
                 htmlFor="add"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Song(s)
+                Add up to 3 songs that remind you of this moment
               </label>
               <div className="relative">
                 <input
@@ -152,7 +152,7 @@ export default function NewJournalEntry({ onAddEntry }) {
                     }
                   }}
                   className="block w-full p-4 text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Song name or Youtube link"
+                  placeholder="Song name"
                 />
                 <button
                   onClick={addSong}
@@ -172,7 +172,7 @@ export default function NewJournalEntry({ onAddEntry }) {
                 >
                   <span className="text-gray-800 truncate">{link}</span>
                   <button
-                    onClick={() => removeYoutubeLink(index)}
+                    onClick={() => removeSong(index)}
                     type="button"
                     className="ml-4 text-red-500 hover:text-red-700 flex items-center"
                   >
