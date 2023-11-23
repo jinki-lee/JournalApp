@@ -32,7 +32,7 @@ export default function AchievementSection() {
           <p className="text-gray-500 dark:text-gray-400">
             Our work on the ENMAX capstone project did not go unnoticed. Thanks
             to our dedication and innovative approach, our capstone group was
-            received the SAIT Work Integrated Learning General Award, a total of <b>$10,000 </b> in scholarships and awards.
+            received the SAIT Work Integrated Learning General Award, a total of <b>$2000 </b> per recipient in scholarships and awards.
           </p>
         </div>
       </div>
