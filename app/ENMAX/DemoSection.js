@@ -4,14 +4,15 @@ export default function DemoSection() {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <iframe className="w-full dark:hidden"
+        <iframe
+          className="w-full dark:hidden"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/NpEaa2P7qZI?si=Hhv2nU-sHWLNoSDZ"
+          src="https://www.youtube.com/embed/43nIVXqL5RU?si=mQ9vNKKrYIjBL7ZS"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <img
           className="w-full hidden dark:block"
@@ -25,14 +26,14 @@ export default function DemoSection() {
           <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
             The ENMAX IT Recognition Portal is a web application that allows
             ENMAX employees to recognize each other for their hard work and
-            dedication. The application is built using ASP.NET Core Web App. 
+            dedication. The application is built using ASP.NET Core Web App.
           </p>
           <a
-            href="https://www.youtube.com/"
+            href="https://sway.office.com/gOgz116NOR47yhGz?ref=Link"
             target="_blank"
             className="inline-flex items-center text-white bg-red-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900"
           >
-            View Demo
+            View Presentation
             <svg
               className="ml-2 -mr-1 w-5 h-5"
               fill="currentColor"

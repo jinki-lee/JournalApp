@@ -57,7 +57,7 @@ export default function ProjectInfo() {
             type="button"
             role="tab"
             aria-controls="capstone"
-            aria-selected="true"
+            aria-selected="false"
             className="inline-block p-4 text-blue-600 rounded-ss-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
           >
             Capstone Partnership
@@ -163,7 +163,7 @@ export default function ProjectInfo() {
                 aria-expanded="false"
                 aria-controls="accordion-flush-body-1"
               >
-                <span>ASP.NET Framework</span>
+                <span>ASP.NET Core</span>
                 <svg
                   data-accordion-icon
                   className="w-3 h-3 rotate-180 shrink-0"
@@ -189,8 +189,8 @@ export default function ProjectInfo() {
             >
               <div className="py-5 border-b border-gray-200 dark:border-gray-700">
                 <p className="mb-2 text-gray-500 dark:text-gray-400">
-                  For our group project, we chose ASP.NET MVC, a web application
-                  framework by Microsoft. Renowned for implementing the
+                  For our group project, we chose ASP.NET, a web application
+                  framework by Microsoft. In development, we implemented the
                   Model-View-Controller (MVC) design pattern, it was integral in
                   developing our dynamic, scalable web application.
                 </p>

@@ -169,7 +169,7 @@ export default function ProjectCard2() {
           href="/ENMAX"
           className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
         >
-          View Demo
+          View Project
           <svg
             className="ml-2 w-4 h-4"
             fill="currentColor"
