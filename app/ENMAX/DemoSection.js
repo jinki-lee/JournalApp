@@ -8,7 +8,7 @@ export default function DemoSection() {
           className="w-full dark:hidden"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/xHqTrnr0_DA?si=gg5IsGDS1nx6eRb-"
+          src="https://www.youtube.com/embed/xHqTrnr0_DA?si=xp26Fuz6PVANZrJu"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
