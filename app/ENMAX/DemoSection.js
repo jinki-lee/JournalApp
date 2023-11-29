@@ -8,17 +8,12 @@ export default function DemoSection() {
           className="w-full dark:hidden"
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/43nIVXqL5RU?si=mQ9vNKKrYIjBL7ZS"
+          src="https://www.youtube.com/embed/xHqTrnr0_DA?si=gg5IsGDS1nx6eRb-"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-        <img
-          className="w-full hidden dark:block"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg"
-          alt="dashboard image"
-        />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             ENMAX IT Recognition Portal
