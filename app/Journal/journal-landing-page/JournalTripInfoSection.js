@@ -9,12 +9,16 @@ export default function JounralFeatureSection() {
           Travel Journey
         </span>
         <hr className="flex-grow h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-        <dl className="grid max-w-screen-md gap-8 mx-auto text-gray-900 sm:grid-cols-3 dark:text-white">
+
+        <dl className="grid max-w-screen-md gap-4 mx-auto text-gray-900 sm:grid-cols-4 dark:text-white">
           <div className="flex flex-col items-center justify-center">
             <dt className="mb-2 text-3xl md:text-4xl font-extrabold">1</dt>
             <dd className="font-light text-gray-500 dark:text-gray-400">Jinki</dd>
           </div>
-
+          <div className="flex flex-col items-center justify-center">
+            <dt className="mb-2 text-3xl md:text-4xl font-extrabold">3</dt>
+            <dd className="font-light text-gray-500 dark:text-gray-400">Cameras</dd>
+          </div>
           <div className="flex flex-col items-center justify-center">
             <dt className="mb-2 text-3xl md:text-4xl font-extrabold">7</dt>
             <dd className="font-light text-gray-500 dark:text-gray-400">Cities</dd>

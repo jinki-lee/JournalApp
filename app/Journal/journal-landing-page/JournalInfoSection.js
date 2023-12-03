@@ -1,38 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function JounralInfoSection() {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-
         <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Visualize Your Emotions
           </h2>
-          <p className="mb-4">
-            2023 was an extremely wild year for me. I worked my first full-time
-            job, took a full course load at school, and began my journey to
-            become a scratch golfer. Additionally, I started going to the gym
-            every morning to clear my head and prepare for the day ahead, which
-            helped, but my mind was still overflowing with thoughts
-          </p>
-          <p className="mb-4">
-            I was navigating through life, trying to figure out what I wanted to
-            do, keeping in touch with friends and family, and looking for ways
-            to integrate and map out all my activities.
-          </p>
-          <p className="mb-4">
-            I found myself overthinking every situation, lacking creativity and
-            motivation, and exhausted from maintaining relationships. This
-            realization led me to understand the importance of taking breaks and
-            writing down my thoughts, allowing me to focus on what was important
-            and gain perspective on my tendency to overthink.
-          </p>
-          <p className="mb-4">
-          This experience inspired me to develop an app and book a solo backpacking trip to Peru.
-          </p>
+          <div className={expanded ? "" : "mb-4"}>
+            <p className="mb-4">
+              2023 was an incredibly wild year for me. I embarked on my first
+              full-time job, took a full course load at school. I picked up the habit of
+              going to the gym every morning to clear my head and prepare
+              for the day, which was somewhat helpful, but my mind remained
+              overwhelmed with thoughts.
+            </p>
+            {expanded && (
+              <div>
+                <p className="mb-4">
+                  I found myself navigating life, striving to determine my path,
+                  staying connected with friends and family, and attempting to
+                  maintain a healthy balance between work and personal life.
+                </p>
+                <p className="mb-4">
+                  I often found myself overthinking every situation, feeling a
+                  lack of creativity and motivation, and being exhausted from
+                  managing relationships. Eventually, I was diagnosed with
+                  Generalized Anxiety Disorder.
+                </p>
+                <p className="mb-4">
+                  This realization prompted a shift in my perspective. I learned
+                  to be content with my achievements and what I possess. Rather
+                  than constantly seeking the next big thing and stressing over
+                  not achieving it, I began to appreciate what I have and my
+                  accomplishments. This shift in mindset inspired me to develop
+                  an app and plan a solo backpacking trip to Peru.
+                </p>
+              </div>
+            )}
+            {!expanded && (
+              <p
+                className="text-blue-500 cursor-pointer"
+                onClick={toggleExpand}
+              >
+                Read more
+              </p>
+            )}
+          </div>
+          {expanded && (
+            <p className="text-blue-500 cursor-pointer" onClick={toggleExpand}>
+              Read less
+            </p>
+          )}
+          <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
+        <img class="w-10 h-10 rounded-full" src="/jinki-2.jpg" alt="profile picture"/>
+        <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
+            <cite class="pe-3 font-medium text-gray-900 dark:text-white">Jinki Lee</cite>
+            <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">An Overthinker</cite>
         </div>
-
+    </figcaption>
+        </div>
         <div className="grid grid-cols-2 gap-4 mt-8">
           <img
             className="w-full rounded-lg"
@@ -45,7 +79,6 @@ export default function JounralInfoSection() {
             alt="office content 2"
           />
         </div>
-
       </div>
     </section>
   );

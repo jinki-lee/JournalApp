@@ -4,6 +4,7 @@ import TeamSection from "./TeamSection";
 import TimelineSection from "./TimelineSection"; 
 import AchievementSection from "./AchievementSection"; 
 import ProjectInfo from "./ProjectInfo";
+import ProjectGallery from "./ProjectGallery";  
 
 
 export default function Page() {
@@ -14,6 +15,7 @@ export default function Page() {
       <ProjectInfo />
       <TimelineSection />
       <AchievementSection />
+      <ProjectGallery/>
     </main>
   );
 }

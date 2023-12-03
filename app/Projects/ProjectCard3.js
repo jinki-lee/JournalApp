@@ -126,7 +126,7 @@ export default function ProjectCard3() {
         href="/Journal"
         className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
       >
-        Use App
+        View App
         <svg
           className="ml-2 w-4 h-4"
           fill="currentColor"
