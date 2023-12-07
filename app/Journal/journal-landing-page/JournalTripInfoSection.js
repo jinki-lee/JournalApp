@@ -25,7 +25,7 @@ export default function JounralFeatureSection() {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <dt className="mb-2 text-3xl md:text-4xl font-extrabold">15</dt>
+            <dt className="mb-2 text-3xl md:text-4xl font-extrabold">19</dt>
             <dd className="font-light text-gray-500 dark:text-gray-400">Days</dd>
           </div>
         </dl>

@@ -9,7 +9,7 @@ export default function JounralFeatureSection() {
             App Features
           </h2>
           <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-            Look back on your entries and the songs you chose. Rediscover how
+            Look back on your journal entries and the songs you chose. Rediscover how
             music framed your emotions and experiences, offering a new
             perspective on your personal journey.
           </p>
