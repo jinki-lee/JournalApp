@@ -20,7 +20,7 @@ const JournalModal = ({ isOpen, entry, onClose }) => {
             >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5"
+                className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const JournalModal = ({ isOpen, entry, onClose }) => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span class="sr-only">Close modal</span>
+              <span className="sr-only">Close modal</span>
             </button>
           </div>
           <p className="font-bold">{entry.date}</p>

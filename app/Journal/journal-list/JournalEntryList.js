@@ -6,17 +6,33 @@ export default function JournalEntryList({ entries }) {
   const [selectedYear, setSelectedYear] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedEntry, setSelectedEntry] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const entriesPerPage = 10;
 
   let filteredEntries = useMemo(() => {
     let tempEntries = entries
-      .filter((entry) =>
-        (selectedMonth ? new Date(entry.date).getMonth() + 1 === parseInt(selectedMonth) : true) &&
-        (selectedYear ? new Date(entry.date).getFullYear() === parseInt(selectedYear) : true)
+      .filter(
+        (entry) =>
+          (selectedMonth
+            ? new Date(entry.date).getMonth() + 1 === parseInt(selectedMonth)
+            : true) &&
+          (selectedYear
+            ? new Date(entry.date).getFullYear() === parseInt(selectedYear)
+            : true)
       )
       .sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date in descending order
 
     return tempEntries;
   }, [entries, selectedMonth, selectedYear]);
+
+  const indexOfLastEntry = currentPage * entriesPerPage;
+  const indexOfFirstEntry = indexOfLastEntry - entriesPerPage;
+  const currentEntries = filteredEntries.slice(
+    indexOfFirstEntry,
+    indexOfLastEntry
+  );
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const showModalWithContent = (entry) => {
     setSelectedEntry(entry);
@@ -82,44 +98,63 @@ export default function JournalEntryList({ entries }) {
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-900 dark:text-white bg-white dark:bg-gray-800 rounded-lg">
             <thead className="text-xs uppercase bg-gray-50 dark:bg-gray-700">
-            <tr>
-              <th scope="col" className="px-6 py-3">
-                Date
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Title
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Actions
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredEntries.length === 0 ? (
               <tr>
-                <td colSpan="3" className="px-6 py-4 text-center">
-                  No journal entries found.
-                </td>
+                <th scope="col" className="px-6 py-3">
+                  Date
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Title
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Actions
+                </th>
               </tr>
-            ) : (
-              filteredEntries.map((entry) => (
-                <tr className="border-b hover:bg-gray-100 dark:hover:bg-gray-700" key={entry.id}>
-                  <td className="px-6 py-4">{entry.date}</td>
-                  <td className="px-6 py-4">{entry.title}</td>
-                  <td className="px-6 py-4">
-                    <button
-                      onClick={() => showModalWithContent(entry)}
-                      className="text-blue-600 hover:text-blue-800 mb-1 truncate"
-                    >
-                      View
-                    </button>
+            </thead>
+            <tbody>
+              {currentEntries.length === 0 ? (
+                <tr>
+                  <td colSpan="3" className="px-6 py-4 text-center">
+                    No journal entries found.
                   </td>
                 </tr>
-              ))
-            )}
-           </tbody>
+              ) : (
+                currentEntries.map((entry) => (
+                  <tr
+                    className="border-b hover:bg-gray-100 dark:hover:bg-gray-700"
+                    key={entry.id}
+                  >
+                    <td className="px-6 py-4">{entry.date}</td>
+                    <td className="px-6 py-4">{entry.title}</td>
+                    <td className="px-6 py-4">
+                      <button
+                        onClick={() => showModalWithContent(entry)}
+                        className="text-blue-600 hover:text-blue-800 mb-1 truncate"
+                      >
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
           </table>
         </div>
+      </div>
+      {/* Pagination Component */}
+      <div className="py-4 flex justify-center">
+        {[
+          ...Array(Math.ceil(filteredEntries.length / entriesPerPage)).keys(),
+        ].map((number) => (
+          <button
+            key={number}
+            onClick={() => paginate(number + 1)}
+            className={`mx-1 px-4 py-2 border rounded ${
+              currentPage === number + 1 ? "bg-gray-200" : ""
+            }`}
+          >
+            {number + 1}
+          </button>
+        ))}
       </div>
 
       <JournalModal

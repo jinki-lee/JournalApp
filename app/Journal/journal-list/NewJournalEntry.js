@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import JournalAlert from './JournalAlert'; // Adjust the path as necessary
 
 export default function NewJournalEntry({ onAddEntry }) {
   const currentDate = new Date();
@@ -40,6 +41,8 @@ export default function NewJournalEntry({ onAddEntry }) {
 
     onAddEntry(newEntry);
 
+    setShowAlert(true);
+
     // Reset form fields
     setDate(formattedDate);
     setTitle("");
@@ -49,19 +52,20 @@ export default function NewJournalEntry({ onAddEntry }) {
     // Automatically hide the alert after 3 seconds
     setTimeout(() => {
       setShowAlert(false);
-    }, 3000);
+    }, 5000);
   };
 
   return (
     <section className="dark:bg-gray-900">
-      {showAlert && (
-        <Alert type="info" onClose={() => setShowAlert(false)}>
-          Journal entry added successfully!
-        </Alert>
-      )}
+{showAlert && (
+  <JournalAlert 
+    message="Journal entry added successfully!" 
+    onClose={() => setShowAlert(false)}
+  />
+)}
 
-      <main className="py-8 px-4 mx-auto max-w-4xl lg:py-8">
-        <h1 className="mb-8 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+      <main className="py-4 px-4 mx-auto max-w-4xl lg:py-2">
+        <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
             Journal
           </span>{" "}
