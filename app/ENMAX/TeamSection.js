@@ -30,7 +30,7 @@ export default function TeamSection() {
           />
           <img
             className="mt-4 w-full lg:mt-10 rounded-lg"
-            src="/CapstoneGroup2.png"
+            src="/CapstoneGroup2.PNG"
             alt="office content 2"
           />
         </div>
