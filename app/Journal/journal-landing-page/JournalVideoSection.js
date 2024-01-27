@@ -26,14 +26,7 @@ export default function JournalVideoSection() {
               Peru 1
             </h2>
             <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
-              lobortis enim. Vivamus rhoncus risus non ligula porttitor aliquet.
-              Donec et auctor magna. Aenean sit amet blandit ipsum. Nam laoreet
-              turpis eu gravida tincidunt. Aliquam ultrices quam vitae blandit
-              tristique. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos. Integer eget cursus
-              mauris, in convallis turpis. Vivamus sagittis hendrerit mollis.
-              Suspendisse id auctor est.
+            In 2023, I embarked on an incredible journey through Peru, exploring Arequipa, Cusco, and Lima. I also hiked the breathtaking Inca Trail to Machu Picchu and had the unforgettable experience of spending nights in the Amazon jungle. It was a year filled with excitement and challenges, and amidst it all, I hardly had the opportunity to fully embrace and appreciate my achievements. So, I dedicated 19 days to self-discovery and cherishing every single moment.
             </p>
           </div>
         </div>
@@ -62,14 +55,7 @@ export default function JournalVideoSection() {
               Peru 1
             </h2>
             <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
-              lobortis enim. Vivamus rhoncus risus non ligula porttitor aliquet.
-              Donec et auctor magna. Aenean sit amet blandit ipsum. Nam laoreet
-              turpis eu gravida tincidunt. Aliquam ultrices quam vitae blandit
-              tristique. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos. Integer eget cursus
-              mauris, in convallis turpis. Vivamus sagittis hendrerit mollis.
-              Suspendisse id auctor est.
+            This marked my very first solo travel adventure, and it was also my introduction to the world of Contiki tours. The trip was packed with countless sights, activities, and learning opportunities. I had the pleasure of meeting incredible people along the way, and I'm excitedly looking forward to experiencing more Contiki tours in the future.
             </p>
           </div>
         </div>
